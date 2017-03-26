@@ -112,11 +112,17 @@ tidyscript<-function(directory="UCI HAR Dataset",
                      trainlbl = "y_train.txt", testlbl = "y_test.txt",
                      filelabel ="activity_labels.txt", filefeature ="features.txt"){
   
-  finaldata<-joindata(directory,filetrain,filetest,trainlbl,testlbl)
-  validcols<-col_select(directory,filefeature)
-  actlookup<-act_label(directory,filelabel)
+  finaldata<-joindata(directory,filetrain,filetest,trainlbl,testlbl) ## 1. Returns the merged dataset
+  validcols<-col_select(directory,filefeature)                       ## 2. Returns the valid column indices and names
+  actlookup<-act_label(directory,filelabel)                          ## 3. Lookup dataframe for labeling the activities
   
-  finaldata<-finaldata[,validcols[,1]]
-  names(finaldata)<-validcols[,2]
-  finaldata<-merge(actlookup,finaldata)
+  finaldata<-finaldata[,validcols[,1]]                               ## 4. Selecting only the required columns
+  names(finaldata)<-validcols[,2]                                    ## 5. Naming all the column names
+  finaldata<-merge(actlookup,finaldata)                              ## 6. Activity names obtained by merging lookup
+                                                                     ##    dataframe and finaldata 
+  
+  ## The script for generating the file in step 5 of the assignment instructions is as follows:
+  
+  tidy<-aggregate.data.frame(finaldata[,-c(1,2,69)],by=list(finaldata$sublabel,finaldata$actlabel),mean,na.rm=TRUE)
+  
 }
