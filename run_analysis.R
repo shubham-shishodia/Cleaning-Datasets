@@ -1,3 +1,6 @@
+## Title: Course 3 Week 4 Peer Programming Assignment
+## Author: Shubham Shishodia
+
 ## The run_analysis.R consists of 4 functions (description below) that read the training and test datasets and returns
 ## a tidy data set as guidelined by the assignement instructions. The steps followed are as follows:
 
@@ -121,8 +124,12 @@ tidyscript<-function(directory="UCI HAR Dataset",
   finaldata<-merge(actlookup,finaldata)                              ## 6. Activity names obtained by merging lookup
                                                                      ##    dataframe and finaldata 
   
-  ## The script for generating the file in step 5 of the assignment instructions is as follows:
+  ## The script for generating the file in step 5 of the assignment instructions is as follows. The script has been
+  ## commented as these commands will have to be executed in the workspace. It assumes that the output of the tidyscript()
+  ## function will be stored in the dataframe "finaldata"
   
-  tidy<-aggregate.data.frame(finaldata[,-c(1,2,69)],by=list(finaldata$sublabel,finaldata$actlabel),mean,na.rm=TRUE)
+  ## tidy<-aggregate.data.frame(finaldata[,-c(1,2,69)],by=list(finaldata$sublabel,finaldata$actlabel),mean,na.rm=TRUE)
+  ## names(tidy)[1:2]<-c("sublabel","actlabel")
+  ## write.table(tidy,file="filename.txt",row.names = FALSE)
   
 }
