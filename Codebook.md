@@ -74,4 +74,6 @@ The description of the variables is taken from the archive website and the "feat
 | 67             	| fbodybodygyrojerkmagmean 	| Mean of magnitude (Euclidean Norm) of fast fourier transform of jerk of   angular velocity of subject body            	|
 | 68             	| fbodybodygyrojerkmagstd  	| Standard deviation of magnitude (Euclidean Norm) of fast fourier   transform of jerk of angular velocity subject body 	|
 | 69                    | sublabel                      | Subject identifier label of the person who conducted the test                                                                 |
+
+
 The above table in markdown was created with the help of an online [markdown table generator](http://www.tablesgenerator.com/markdown_tables)

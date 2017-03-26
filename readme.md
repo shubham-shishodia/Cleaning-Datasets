@@ -36,5 +36,5 @@ functions are provided in the script comments.
 1. Mentor Leonard Greski's [blogpost](https://github.com/lgreski/acsexample) were helpful for writing readme and codebook for the assignment
 2. David Hood's [blogpost](https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) was really helpful to 
    provide hints and a general procedure on how to go about writing the script
-3. I learnt basic masrkdown formatting from the [link](https://blog.ghost.org/markdown/) here.
+3. I learnt basic markdown formatting from the [link](https://blog.ghost.org/markdown/) here.
 4. The tables in the "readme" and "codebook" were generated using this [website](http://www.tablesgenerator.com/markdown_tables)
