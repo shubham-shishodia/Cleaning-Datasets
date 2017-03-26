@@ -1,9 +1,9 @@
 ## The run_analysis.R consists of 4 functions (description below) that read the training and test datasets and returns
 ## a tidy data set as guidelined by the assignement instructions. The steps followed are as follows:
 
-## 1. Read training and test data (X_train.txt and X_test.txt) along with their label data (y_train.txt and y_test)
-##    respectively. This is done in the joindata() function which returns a single, combined training and test data
-##    along with their corresponding labels.
+## 1. Read training and test data ("X_train.txt" and "X_test.txt") along with their label data ("y_train.txt" and "y_test"),
+##    and subject label data ("subject_train.txt" and "subject_test.txt") respectively. This is done in the joindata() 
+##    function which returns a single, combined training and test data along with their corresponding labels.
 ## 2. Extract only measurements on mean and standard deviation from the merged dataset. The column numbers and names 
 ##    to be extracted are obtained from the col_select() function. The function returns a dataframe containing the 
 ##    column indices and column names containing measurements on mean and standard deviation. Also, the function
@@ -20,7 +20,7 @@
 ## to read the data sets. While doing so, it is assumed that folder containing the data is in the working directory and
 ## the internal folder structure has not been changed. The function flashes out an error message if it's unable to find
 ## the file. If all the files are available, the function reads the training and test data, and labels. It first merges
-## the corresponding measurements data, label, and subject data using cbind(). It then proceeds with merging the 
+## the corresponding measurements data, label, and subject label data using cbind(). It then proceeds with merging the 
 ## training and test data using rbind().
 
 joindata<-function(directory = "UCI HAR Dataset",
